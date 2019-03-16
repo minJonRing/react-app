@@ -1,0 +1,61 @@
+.paper {
+  width: 100%;
+  height: 100%;
+}
+
+.paper .list-box {
+  width: 100%;
+  height: 100%;
+  transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.paper .list-box .list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.paper .list-box .list.animate {
+  transition-duration: 600ms;
+}
+
+.paper .list-box .list.left .item {
+  transform: skew(5deg);
+}
+
+.paper .list-box .list.right .item {
+  transform: skew(-5deg);
+}
+
+.paper .list-box .list .item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 10vh;
+  transition-duration: 600ms;
+}
+
+.paper .list-box .list .item .item-tip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.paper .list-box .list .item .item-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.paper .list-box .list .item .item-box img {
+  display: block;
+  height: 100%;
+}

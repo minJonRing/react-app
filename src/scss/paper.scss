@@ -1,0 +1,58 @@
+.paper {
+    // width: calc(100% - 140px);
+    width: 100%;
+    height: 100%;
+    .list-box {
+        width: 100%;
+        height: 100%;
+        transform: matrix(.5, 0, 0, .5, 0, 0);
+        // touch-action: pan-y;
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: grab;
+        .list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            &.animate {
+                transition-duration: 600ms;
+            }
+            &.left {
+                .item {
+                    transform: skew(5deg);
+                }
+            }
+            &.right {
+                .item {
+                    transform: skew(-5deg);
+                }
+            }
+            .item {
+                position: relative;
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0 10vh;
+                transition-duration: 600ms;
+                .item-tip {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+                .item-box {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    img {
+                        display: block;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
