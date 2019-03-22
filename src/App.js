@@ -21,7 +21,8 @@ class App extends Component {
     if(value == this.state.ind || !this.state.over){
       return;
     }
-    let l = value > this.state.ind ? 0 : 1;
+    sessionStorage.setItem("nav",value)
+    let l = value > this.state.ind ? -1 : value == this.state.ind? 0 : 1;
     this.setState({
       ind:value,
       over:false,
@@ -32,6 +33,12 @@ class App extends Component {
   handleOver(){
     this.setState({
       over:true
+    })
+  }
+  componentWillMount(){
+    // 每次进入页面渲染 用户获取ajax数据
+    this.setState({
+        ind:sessionStorage.getItem("nav")
     })
   }
   render() {

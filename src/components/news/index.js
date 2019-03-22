@@ -15,6 +15,14 @@ class News extends Component {
             add:!bl
         })
     }
+    componentWillMount(){
+        // 每次进入页面渲染 用户获取ajax数据
+        setTimeout(() => {
+            this.setState({
+                add:true
+            })
+        }, 300);
+    }
     render(){
         return (
             <div className={['news',this.state.add?'active':''].join(" ")} >

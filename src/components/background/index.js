@@ -18,8 +18,14 @@ class Back extends Component {
             ind:0
         }
     }
+    componentWillMount(){
+        // 每次进入页面渲染 用户获取ajax数据
+        this.setState({
+            ind:sessionStorage.getItem("nav")
+        })
+    }
     handleReturnInd(i){
-        let j = this.props.childDirection?0:2;
+        let j = this.props.childDirection == 0?'':this.props.childDirection == 1?0:2;
         let ind = this.state.ind;
         let url = this.state.backs[ind-1+i];
         if(j == i){
@@ -38,7 +44,7 @@ class Back extends Component {
                 })
             }, 800);
         }
-        return this.props.childDirection?'direction-right':'direction-left';
+        return this.props.childDirection == 0?'':this.props.childDirection == 1?'direction-right':'direction-left';
     }
     render(){
         return (
