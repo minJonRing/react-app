@@ -47,14 +47,19 @@ class Paper extends Component {
     handleMouseUp=(e)=>{
         let slide = this.state.translateInd;
         let x = e.pageX;
+        let et = Date.now();
+        let item = document.querySelector(".list-box .item");
+        let w = item.clientWidth/2 + 
         this.setState({
             direction:" ",
             isMOuse:false,
             listActive:true
         })
-        slide = (x - this.state.sx) > 0 ? slide - 1 : slide + 1;
-        slide = slide < 0 ?0:slide;
-        slide = slide > this.state.list.length - 1?this.state.list.length - 1:slide;
+        if( Math.abs(x - this.state.sx) > 200 || (et - this.state.st) < 300 ){
+            slide = (x - this.state.sx) > 0 ? slide - 1 : slide + 1;
+            slide = slide < 0 ? 0:slide;
+            slide = slide > this.state.list.length - 1?this.state.list.length - 1:slide;
+        }
         this.setState({
             translateInd:slide,
             translate:-(110*slide)
