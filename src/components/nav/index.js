@@ -7,7 +7,7 @@ class Nav extends Component {
             nav:[
                 {index:0,url:"/",name:"首页"},
                 {index:1,url:"/news",name:"新闻"},
-                {index:2,url:"/",name:"产品"},
+                {index:2,url:"/work",name:"产品"},
                 {index:3,url:"/",name:"媒体"},
                 {index:4,url:"/",name:"动画"},
                 {index:5,url:"/",name:"漫画"},

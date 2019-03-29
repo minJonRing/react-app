@@ -6,14 +6,14 @@ class Back extends Component {
         super()
         this.state = {
             backs:[
-                "http://www.hzsinq.com/images/web/index/1.png",
-                "http://www.hzsinq.com/images/web/index/2.png",
-                "http://www.hzsinq.com/images/web/index/3.png",
-                "http://www.hzsinq.com/images/web/index/4.png",
-                "http://www.hzsinq.com/images/web/index/1.png",
-                "http://www.hzsinq.com/images/web/index/2.png",
-                "http://www.hzsinq.com/images/web/index/3.png",
-                "http://www.hzsinq.com/images/web/index/4.png",
+                "https://img.zcool.cn/community/01ad915c8646d7a80120af9a2f6ca4.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/0192345995801d00000021297684c0.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/0198b95994115ca801215603d3d95c.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/017dec59d1deaaa8012044633bc9ff.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/0155b759bdf17aa80120753469cd5c.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/01f42159bdeec9a801212fb7211824.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/012eba5958601aa8012193a3d59567.jpg@1280w_1l_2o_100sh.jpg",
+                "https://img.zcool.cn/community/012c98553e12590000002561b3c083.jpg@1280w_1l_2o_100sh.jpg",
                 ],
             ind:0
         }

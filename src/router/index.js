@@ -5,6 +5,7 @@ import history from '../history';
 
 import Index from "../components/index/index"
 import News from "../components/news/index"
+import Work from "../components/work/index"
 // 设置根路由
 const BasicExample = () => (
     // 根路由标签
@@ -12,6 +13,7 @@ const BasicExample = () => (
         <div className="router" style={{height:'100%'}}>
             <Route exact path="/" component={Index} />
             <Route path="/news" component={News} />
+            <Route path="/work" component={Work} />
         </div>
     </Router>
 );

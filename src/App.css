@@ -3,6 +3,16 @@
     height: 100%;
 }
 
+.router {
+    width: calc(100% - 140px);
+    margin-left: 140px;
+    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
